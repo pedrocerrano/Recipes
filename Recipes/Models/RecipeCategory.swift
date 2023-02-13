@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RecipeCategory {
+class RecipeCategory: Codable {
     let id: UUID
     var title: String
     var recipes: [Recipe]
