@@ -41,9 +41,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="tdF-fv-0ek" kind="show" identifier="toRecipeCategoryDetail" id="H0F-5r-hFM"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -54,7 +51,7 @@
                     <navigationItem key="navigationItem" title="Recipes Categories" id="BQ3-UF-OL9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8Md-hQ-N3O">
                             <connections>
-                                <action selector="addButtonTapped:" destination="Rlg-Hc-xCK" id="iwy-Yc-JZW"/>
+                                <segue destination="tdF-fv-0ek" kind="show" id="CcT-Ag-me6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -118,9 +115,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="RhT-1e-pN6" kind="show" identifier="toRecipeDetail" id="tzv-x7-B8a"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -133,17 +127,15 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Osi-pT-5eL">
                             <connections>
                                 <action selector="addButtonTapped:" destination="tdF-fv-0ek" id="K24-Jm-tvR"/>
+                                <segue destination="RhT-1e-pN6" kind="show" id="53j-KI-6vS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="categoryNameTextField" destination="1hH-To-B4q" id="Nsz-o8-3Wf"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnv-Lt-SHx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="-159"/>
+            <point key="canvasLocation" x="959" y="-159"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mzy-cw-9fH">
@@ -194,18 +186,10 @@
                                 <rect key="frame" x="16" y="100" width="382" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipes Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Svq-r2-xLA">
-                                        <rect key="frame" x="0.0" y="0.0" width="352" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="900" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQ1-mJ-F4h">
-                                        <rect key="frame" x="360" y="0.0" width="22" height="34"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="star.fill" catalog="system"/>
-                                        <connections>
-                                            <action selector="isFavoriteButtonTapped:" destination="RhT-1e-pN6" eventType="touchUpInside" id="vgQ-h4-l04"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8sr-UW-cpW">
@@ -235,23 +219,12 @@ Lorem Ipsum...</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fxf-uI-ydI">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BCk-WY-Gn5">
-                            <connections>
-                                <action selector="saveButtonTapped:" destination="RhT-1e-pN6" id="J55-6k-IiI"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BCk-WY-Gn5"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="calorieTextField" destination="EsZ-rL-Ppu" id="Wf8-89-1ik"/>
-                        <outlet property="cookTimeTextField" destination="twu-Ol-hRa" id="YmD-5Z-kCf"/>
-                        <outlet property="isFavoriteButton" destination="yQ1-mJ-F4h" id="QnK-wB-Ac0"/>
-                        <outlet property="recipeDescriptionTextField" destination="8sr-UW-cpW" id="Or3-Pl-Dka"/>
-                        <outlet property="recipeTitleTextField" destination="Svq-r2-xLA" id="qEU-tT-cge"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8Q-Y8-Yf0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="-159"/>
+            <point key="canvasLocation" x="1764" y="-159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nqf-Ot-Qls">
@@ -270,11 +243,10 @@ Lorem Ipsum...</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKn-al-NWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-775.36231884057975" y="-159.375"/>
+            <point key="canvasLocation" x="-606" y="-159"/>
         </scene>
     </scenes>
     <resources>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
