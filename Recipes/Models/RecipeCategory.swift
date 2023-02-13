@@ -18,3 +18,10 @@ class RecipeCategory {
         self.recipes = recipes
     } //: MEMBERWISE INITIALIZER
 } //: CLASS
+
+
+extension RecipeCategory: Equatable {
+    static func == (lhs: RecipeCategory, rhs: RecipeCategory) -> Bool {
+        return lhs.id == rhs.id
+    } //: EQUALtoSELF
+} //: EXTENSTION
