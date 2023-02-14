@@ -17,11 +17,14 @@ class RecipeDetailViewController: UIViewController {
     
     
     // MARK: - PROPERTIES
-    var recipe: Recipe? {
-        didSet {
-            updateViews()
-        } //: PROPERTY OBSERVER
-    } //: COMPUTED
+    var recipe: Recipe?
+    
+    
+    //MARK: - LIFECYCLE
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateViews()
+    } //: willAPPEAR
     
     
     //MARK: - HELPER FUNCTIONS
