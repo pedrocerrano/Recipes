@@ -9,20 +9,25 @@ import UIKit
 
 class RecipeDetailViewController: UIViewController {
     
-    // MARK: - IBOutlets
+    // MARK: - OUTLETS
     @IBOutlet weak var recipeTitleTextField: UITextField!
     @IBOutlet weak var calorieTextField: UITextField!
     @IBOutlet weak var cookTimeTextField: UITextField!
     @IBOutlet weak var recipeDescriptionTextField: UITextView!
     
-    // MARK: - Properties
-    var recipe: Recipe?
     
-    // MARK: - Methods
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    // MARK: - PROPERTIES
+    var recipe: Recipe? {
+        didSet {
+            updateViews()
+        } //: PROPERTY OBSERVER
+    } //: COMPUTED
+    
+    
+    //MARK: - HELPER FUNCTIONS
+    func updateViews() {
         guard let recipe = recipe else { return }
-        recipeTitleTextField.text = recipe.title
+        recipeTitleTextField.text       = recipe.title
         recipeDescriptionTextField.text = recipe.description
         if let calories = recipe.calories {
             calorieTextField.text = "\(calories)"
@@ -30,8 +35,10 @@ class RecipeDetailViewController: UIViewController {
         if let cookTime = recipe.cookTime {
             cookTimeTextField.text = "\(cookTime)"
         }
-    }
+    } //: UPDATE
     
+    
+    // MARK: - ACTIONS
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let recipe = recipe,
               let title = recipeTitleTextField.text,
@@ -44,6 +51,6 @@ class RecipeDetailViewController: UIViewController {
                                 calories: calories,
                                 cookTime: cookTime)
         self.navigationController?.popViewController(animated: true)
-    }
+    } //: SAVE BUTTON
     
 } //: CLASS
