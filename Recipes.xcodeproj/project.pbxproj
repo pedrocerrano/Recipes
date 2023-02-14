@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29E6A61D299BFCAF00E92A08 /* RecipeCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E6A61C299BFCAF00E92A08 /* RecipeCategoryController.swift */; };
 		F7040FF22716520B00B913AC /* RecipeCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7040FF12716520B00B913AC /* RecipeCategoryTableViewController.swift */; };
 		F7040FF72716528200B913AC /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7040FF62716528200B913AC /* RecipeDetailViewController.swift */; };
 		F7FB3DE527163FDB0091D1B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB3DE427163FDB0091D1B1 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29E6A61C299BFCAF00E92A08 /* RecipeCategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryController.swift; sourceTree = "<group>"; };
 		F7040FF12716520B00B913AC /* RecipeCategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryTableViewController.swift; sourceTree = "<group>"; };
 		F7040FF62716528200B913AC /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		F7FB3DE127163FDB0091D1B1 /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				F7FB3DFD271649D20091D1B1 /* RecipeController.swift */,
+				29E6A61C299BFCAF00E92A08 /* RecipeCategoryController.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				F7FB3DE727163FDB0091D1B1 /* SceneDelegate.swift in Sources */,
 				F7FB3E0027164A4E0091D1B1 /* RecipeTableViewController.swift in Sources */,
 				F7FB3DFB271643B10091D1B1 /* Recipe.swift in Sources */,
+				29E6A61D299BFCAF00E92A08 /* RecipeCategoryController.swift in Sources */,
 				F7FB3DFE271649D20091D1B1 /* RecipeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
