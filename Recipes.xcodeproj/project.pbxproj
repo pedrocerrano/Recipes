@@ -62,8 +62,8 @@
 		F7040FF32716522700B913AC /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
-				F7FB3DFD271649D20091D1B1 /* RecipeController.swift */,
 				29E6A61C299BFCAF00E92A08 /* RecipeCategoryController.swift */,
+				F7FB3DFD271649D20091D1B1 /* RecipeController.swift */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";

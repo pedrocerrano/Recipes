@@ -13,18 +13,21 @@ class Recipe: Codable {
     var description: String
     var calories: Int?
     var cookTime: Int?
+    var isFavorite: Bool
     
-    init(id: UUID = UUID(), title: String, description: String, calories: Int?, cookTime: Int?) {
-        self.id = id
-        self.title = title
+    init(id: UUID = UUID(), title: String, description: String, calories: Int?, cookTime: Int?, isFavorite: Bool = false) {
+        self.id          = id
+        self.title       = title
         self.description = description
-        self.calories = calories
-        self.cookTime = cookTime
-    }
-}
+        self.calories    = calories
+        self.cookTime    = cookTime
+        self.isFavorite  = isFavorite
+    } //: MEMBERWISE INITIALIZER
+    
+} //: CLASS
 
 extension Recipe: Equatable {
     static func == (lhs: Recipe, rhs: Recipe) -> Bool {
         return lhs.id == rhs.id
     }
-}
+} //: EXTENSION

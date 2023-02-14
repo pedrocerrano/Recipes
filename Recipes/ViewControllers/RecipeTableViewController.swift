@@ -44,6 +44,7 @@ class RecipeTableViewController: UITableViewController {
  
         let recipeIndex = category?.recipes[indexPath.row]
         cell.recipe     = recipeIndex
+        cell.delegate   = self
  
         return cell
     } //: CELL CONFIG
@@ -79,3 +80,12 @@ class RecipeTableViewController: UITableViewController {
     } //: ADD BUTTON
     
 } //: CLASS
+
+
+extension RecipeTableViewController: RecipeTableViewCellDelegate {
+    func toggleFavoriteButtonTapped(cell: RecipeTableViewCell) {
+        guard let recipeIndex = cell.recipe else { return }
+        RecipeController.toggleFavorite(recipe: recipeIndex)
+        cell.updateViews()
+    } //: IMPLEMENT PROTOCOL
+} //: EXTENSION

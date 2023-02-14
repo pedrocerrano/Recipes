@@ -10,11 +10,8 @@ import Foundation
 class RecipeController {
     
     // MARK: - CRUD FUNCTIONS
-    static func createRecipe(title: String = "Untitled Recipe",
-                   description: String = "Recipe Description",
-                   calories: Int = 0,
-                   cookTime: Int = 0,
-                   in category: RecipeCategory) {
+    static func createRecipe(title: String = "Untitled Recipe", description: String = "Recipe Description", calories: Int = 0, cookTime: Int = 0, in category: RecipeCategory) {
+        
         let recipe = Recipe(title: title, description: description, calories: calories, cookTime: cookTime)
         category.recipes.append(recipe)
         
@@ -40,5 +37,12 @@ class RecipeController {
         
         RecipeCategoryController.sharedInstance.saveRecipesToDisk()
     } //: UPDATE
+    
+    
+    //MARK: - FUNCTIONS
+    static func toggleFavorite(recipe: Recipe) {
+        recipe.isFavorite.toggle()
+        RecipeCategoryController.sharedInstance.saveRecipesToDisk()
+    } //: TOGGLE
     
 } //: CLASS
